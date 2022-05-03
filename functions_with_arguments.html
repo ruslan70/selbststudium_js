@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Exercises: Functions with arguments</h1>
+
+    <p>The Fortune Teller</p>
+    <p id="demo1"></p>
+    <script>
+        function tellFortune(jobTitle, geoLocation, partner, numKids) {
+        let future = 'You will be a ' + jobTitle + ' in ' + geoLocation + ' and married to ' +
+    partner + ' ' + ' with ' + numKids + ' kids.';
+        alert (future);
+        }
+
+        tellFortune('hacker', 'Spain', 'Isabella', 3);
+        tellFortune('stunt double', 'Japan', 'Hiroshi', 1);
+        tellFortune('President', 'Chechnya', 'Besam', 5);
+
+    </script>
+
+    <p>The Puppy Age Calculator</p>
+    <p id="demo2"></p>
+    <script>
+        function calculateDogAge(age) {
+            let dogYears = 7*age;
+            console.log("Your doggie is " + dogYears + " years old in dog years!");
+        }
+
+        calculateDogAge(1);
+        calculateDogAge(0.5);
+        calculateDogAge(12);
+    </script>
+
+
+
+    
+
+    <p>The Lifetime Supply Calculator</p>
+    <p id="demo3"></p>
+    <script>
+        function calculateSupply(age, numPerDay) {
+            var maxAge = 100;
+            var totalNeeded = (numPerDay * 365) * (maxAge - age);
+            var message = 'You will need ' + totalNeeded + ' cups of tea to last you until the ripe old age of ' + maxAge;
+            alert (message);
+        }
+
+            calculateSupply(52, 3);
+            calculateSupply(52, 2);
+            calculateSupply(52, 4);
+
+    </script>
+
+    
+
+
+
+
+
+
+
+</body>
+</html>

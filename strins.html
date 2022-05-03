@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>JavaScript Exercises: Strings</h1>
+
+    <p>DrEvil</p>
+    <p id="demo1"></p>
+        <script>
+            function drEvil(amount) {
+                if (amount == 1000000) {
+                    return amount + " dollars (pinky)";
+                } else {
+                    return amount + " dollars";
+                }
+            }
+
+    
+        </script>       
+        
+
+    <p>MixUp</p>
+    <p id="demo2"></p>
+        <script>
+            function mixUp(a, b) {
+                return b.slice(0, 2) + a.slice(2) + " " + a.slice(0, 2) + b.slice(2);
+            }
+        </script>
+
+
+<p>FixStart</p>
+    <p name="demo3"></p>
+        <script>
+            function fixStart(s) {
+                let c = s.charAt(0);
+                return c + s.slice(1).replace(new RegExp(c, 'g'), '*');
+            }
+         </script>   
+            
+        
+       
+                
+
+
+   
+
+</body>
+
+
+</html>

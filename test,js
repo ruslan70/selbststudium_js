@@ -1,0 +1,8 @@
+            let numKids  = 5;
+            let partner  = 'Joy Rieger';
+            let geoLocation = 'Zürich';
+            let jobTitle = 'web developer';
+            const future = 'You will be a ' + jobTitle + ' in ' + geoLocation + ', and married to ' + partner + ' ' + ' with ' + numKids + ' kids.';
+            //alert(future);
+
+           console.log(future);
