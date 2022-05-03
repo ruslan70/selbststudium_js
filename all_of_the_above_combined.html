@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>JavaScript Exercises: All of the above combined</h1>
+
+    <p>The Word Guesser</p>
+    <p id="demo1"></p>
+        <script>
+            var wordLetters     = ['G', 'O', 'A', 'T'];
+            var guessedLetters  = ['_', '_', '_', '_'];
+
+            function guessLetter(letter) {
+                var goodGuess = false;
+                var moreToGuess = false;
+                for (var i = 0; i < wordLetters.length; i++) {
+                    if (wordLetters[i] == letter) {
+                        guessedLetters[i] = letter;
+                        goodGuess = true;
+                    }
+                    if (guessedLetters[i] == '_') {
+                        moreToGuess = true;
+                    }
+                }
+                if (goodGuess) {
+                    console.log('Yay, you found a letter!');
+                    console.log(guessedLetters.join(''));
+                    if (!moreToGuess) {
+                        console.log('YOU WON!');
+                    } 
+                } else {
+                    console.log('Oh noes, thats not right!');
+                }
+            }
+
+            guessLetter('G');
+            guessLetter('I');
+            guessLetter('O');
+            guessLetter('A');
+            guessLetter('T');
+        </script>       
+        
+ 
+            
+    
+</body>
+
+
+</html>

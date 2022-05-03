@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>JavaScript Exercises: if/else statements</h1>
+
+    <p>What number's bigger?</p>
+    <p id="demo1"></p>
+        <script>
+            function greaterNum(num1, num2) {
+                if (num1 > num2) {
+                    return num1;
+                } else {
+                    return num2;
+                }
+            }
+
+            console.log(greaterNum(5, 10));
+        </script>       
+        
+
+    <p>The World Translator</p>
+    <p id="demo2"></p>
+        <script>
+           function helloWorld(lang) {
+                if (lang == 'fr') {
+                    return 'Bonjour tout le monde';
+                } else if (lang == 'es') {
+                    return 'Hola, Mundo';
+                } else {
+                    return 'Hello, World';
+                }
+            }
+
+            console.log(helloWorld('en'));
+            console.log(helloWorld('fr'));
+            console.log(helloWorld('es'));
+        </script>
+
+<p>The Grade Assigner</p>
+    <p name="demo3"></p>
+        <script>
+            function assignGrade(score) {
+                if (score > 90) {
+                    return 'A';
+                } else if (score > 80) {
+                    return 'B';
+                } else if (score > 70) {
+                    return 'C';
+                } else if (score > 65) {
+                    return 'D';
+                } else {
+                    return 'F';
+                }
+            }
+
+            console.log('You got a ' + assignGrade(95));
+            console.log('You got a ' + assignGrade(65));
+         </script>   
+            
+        
+       
+                
+
+
+   
+
+</body>
+
+
+</html>
