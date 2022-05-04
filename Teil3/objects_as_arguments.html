@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>JavaScript Exercises: Objects as Arguments</h1>
+
+    <p>The Movie Database</p>
+    <button onclick="printMovie(trends)">Try it</button>
+    <p id="demo1"></p>
+        <script>
+            var trends = {
+                title: 'Doctor Strange in the Multiverse of Madness',
+                duration: 126,
+                stars: ['Benedict Cumberbatch', 'Elizabeth Olsen', 'Chiwetel Ejiofor']
+            };
+
+            function printMovie(movie) {
+                console.log(movie.title + ' lasts for ' + movie.duration + ' minutes');
+                var starsString = 'Stars: ';
+                for (var i = 0; i < movie.stars.length; i++) {
+                    starsString += movie.stars[i];
+                    if (i != movie.stars.length -1) {
+                        starsString += ', ';
+                    }
+                }
+                console.log(starsString);
+            }
+
+            // Or...
+            function printMovie(movie) {
+                console.log(movie.title + ' lasts for ' + movie.duration + ' minutes');
+                console.log('It stars ' + movie.stars.join(', '));
+            }
+            printMovie(trends);
+        </script>   
+            
+         <script>
+          
+var myFavMovie = {
+    title: 'Puff the Magic Dragon',
+    duration: 30,
+    stars: ['Puff', 'Jackie', 'Living Sneezes']
+};
+
+function printMovie(movie) {
+    console.log(movie.title + ' lasts for ' + movie.duration + ' minutes');
+    var starsString = 'Stars: ';
+    for (var i = 0; i < movie.stars.length; i++) {
+        starsString += movie.stars[i];
+        if (i != movie.stars.length -1) {
+            starsString += ', ';
+        }
+    }
+    console.log(starsString);
+}
+
+// Or...
+function printMovie(movie) {
+    console.log(movie.title + ' lasts for ' + movie.duration + ' minutes');
+    console.log('It stars ' + movie.stars.join(', '));
+}
+printMovie(myFavMovie);
+        </script>  
+
+            
+    
+</body>
+
+
+</html>

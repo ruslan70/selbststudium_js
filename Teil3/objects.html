@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Exercises: Objects</h1>
+
+    <p>The Recipe Card</p>
+    <p id="demo1"></p>
+        <script>
+           
+            var recipe = {
+                'title': 'Salad',
+                'servings': 2,
+                'ingredients': ['salt', 'cucumber', '2 tomatoes','onion']
+            };
+
+            console.log(recipe.title);
+            console.log('Servings: ' + recipe.servings);
+            console.log('Ingredients:');
+            for (var i = 0; i < recipe.ingredients.length; i++) {
+                console.log(recipe.ingredients[i]);
+               
+            }
+        </script>      
+        
+        <p>The Reading List</p>
+        <p id="demo2"></p>
+            <script>
+               
+                var books = [
+                    {
+                        'title': 'Basic',
+                        'author': 'Ruslan Khatuev',
+                        'alreadyRead': true
+                    },
+
+                    {
+                        'title': 'PHP',
+                        'author': 'Nina Freimann',
+                        'alreadyRead': true
+
+                    },
+
+                    {
+                        'title': 'Hobbit',
+                        'author': 'J.R.R. Tolkien',
+                        'alreadyRead': false
+
+                    }];
+                
+    
+            
+                for (var i = 0; i < books.length; i++) {
+                    var book = books[i];
+                    var bookInfo = book.title + '" by ' + book.author;
+                    if (book.alreadyRead) {
+                        console.log('You are already read "' + bookInfo);
+                    } else {
+                        console.log('You still need to read  "' + bookInfo);
+                    }
+                    
+                }
+            </script>    
+        
+ 
+            
+    
+</body>
+
+
+</html>
