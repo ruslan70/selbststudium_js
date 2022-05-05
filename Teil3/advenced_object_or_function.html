@@ -141,7 +141,13 @@
             console.log(validateCreditCard('1211-1111-1111-1112')); //true
         </script>    
 
-        <script>
+        <p>Credit Card Validation with Luhn-Algorithme:<br>
+            1.Counting from the check digit, which is the rightmost, and moving left, double the value of every second digit.<br>
+            2.Sum the digits of the products (e.g., 10: 1 + 0 = 1, 14: 1 + 4 = 5) together with the undoubled digits from the original number.<br>
+            3.If the total modulo 10 is equal to 0 (if the total ends in zero) then the number is valid according to the Luhn formula; else it is not valid.</p>
+        <p id="demo2"></p> 
+        
+        <script> // First example of the Luhn-Algorithm:
             function check(code) {
 
                 if (Number.isNaN(code)) return '';
@@ -158,9 +164,24 @@
                 return (sum % 10).toString();
             }
 
-             // console.log(check('4193744002516864'));
+                console.log(check('4193744002516864'));
         </script>
         
+        <script>  // Second example of the Luhn-Algorithm:
+            const luhnCheck = num => {
+                let arr = (num + '')
+                    .split('')
+                    .reverse()
+                    .map(x => parseInt(x));
+                let lastDigit = arr.splice(0, 1)[0];
+                let sum = arr.reduce((acc, val, i) => (i % 2 !== 0 ? acc + val : acc + ((val * 2) % 9) || 9), 0);
+                sum += lastDigit;
+                return sum % 10 === 0;
+            };
+                console.log(luhnCheck('4485275742308327'));
+                console.log(luhnCheck(6011329933655299));
+                console.log(luhnCheck(123456789));
+        </script>
 
             
     

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Exercises: Arrow Functions</h1>
+
+    <p>Add Numbers</p>
+    <p id="demo1.1"></p>
+        <script>
+             // This is a function:
+            function addNumbers(a,b) {
+                return a + b;
+            }
+
+            addNumbers(2,4);
+            alert (addNumbers(2,4));
+
+        </script>    
+            <!--     
+                ||
+                ||  from a function to a arrow function
+                \/
+            -->
+        <p id="demo1.2"></p>
+        <script>
+            // This is arrow function:
+            const addNumber = (a,b) => {
+                return a + b;
+            }
+
+            addNumber(2,4);
+            alert (addNumber(2,4));
+
+        </script> 
+    
+             
+
+            <p id="demo2"></p>
+            <script>
+                // arrow function with min. two parameter:
+                const multiplyNumbers = (a, b) => {
+                    return a * b;
+                }
+
+                multiplyNumbers(2,4);
+                alert (multiplyNumbers(2,4));
+
+            </script>   
+
+            <script>
+                // arrow function without parameters:
+                const horn = () => {
+                    console.log('To-o-o-o-t!');
+                }
+
+                horn();
+
+            </script>  
+
+            <script>
+                // arrow function with one  parameter:
+                const square1 = (x) => {
+                    return x * x;
+                }
+
+                square1(2);
+                alert (square1(2));
+
+            </script>  
+            
+    
+</body>
+    
+    
+</html>
