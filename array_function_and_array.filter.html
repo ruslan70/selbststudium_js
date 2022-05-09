@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Exercise with Arrow Function and Array.filter</h1>
+
+    <p>Citys List</p>
+    <p id="demo1"></p>
+
+    <script>
+        const ages = [32, 33, 16, 40];
+
+        document.getElementById("demo1").innerHTML = ages.filter(checkAdult);
+
+        function checkAdult(age) {
+            return age >= 18;
+        }
+    </script>
+    <p id="demo"></p>
+    <script>
+        /* let NewYork = 8175133;
+         let Chicago = 2695598;
+         let LosAngeles = 3792621;
+         let Houston = 2099451;
+         let Philadelphia = 1526006;
+         const citys = [NewYork, Chicago, LosAngeles, Houston, Philadelphia];
+
+         document.getElementById("demo").innerHTML = citys.filter(checkThreeMio);
+
+         function checkThreeMio(name) {
+             return name >= 3000000;
+         }  */
+    </script>
+    <p id="demo1"></p>
+    <script>
+        
+        let cities = [
+            { name: "New York", population: 8175133 },
+            { name: "Chicago", population: 2695598 },
+            { name: "Los Angeles", population: 3792621 },
+            { name: "Houston", population: 2099451 },
+            { name: "Philadelphia", population: 1526006 },
+        ];
+        let bigCities =[];
+        for (let i = 0; i < cities.length; i++) {
+           if (cities[i].population > 3000000) {
+               bigCities.push(cities[i]);
+           }
+       }
+
+       
+    </script>
+
+
+    <script>
+        function execute() {
+            let cities1 = [
+                { name: "New York", population: 8175133},
+                { name: "Chicago", population: 2695598},
+                { name: "Los Angeles", population: 3792621},
+                { name: "Houston", population: 2099451},
+                { name: "Philadelphia", population: 1526006},
+            ];
+
+            let bigCities1 = cities1.filter((city) => city.population > 3000000);
+
+
+            console.log("Big Cities",bigCities1);
+        }
+
+        execute(); 
+     
+
+        /*document.getElementById("demo1").innerHTML = citys.filter(checkThreeMio);
+
+        function checkThreeMio(name) {
+            return name >= 3000000;
+       // } */
+    </script>
+
+    <script>
+        heroes = [
+            { name: "Batman", franchise: "DC" },
+            { name: "Ironman", franchise: "Marvel" },
+            { name: "Thor", franchise: "Marvel" },
+            { name: "Superman", franchise: "DC" }
+        ];
+
+        let marvelHeroes = heroes.filter(function (hero) {
+            return hero.franchise == "Marvel";
+        });
+
+
+        // [ name: “Ironman”, franchise: “Marvel”, name: “Thor”, franchise: “Marvel” ]
+
+        alert(marvelHeroes);
+    </script>
+
+    <script>
+
+        let bigCityes = new Array();
+
+        let cityes = [
+            { name: 'Los Angeles', population: 3792621 },
+            { name: 'New York', population: 8175133 },
+            { name: 'Chicago', population: 2695598 },
+            { name: 'Houston', population: 2099451 },
+            { name: 'Philadelphia', population: 1526006 }
+        ];
+
+        for (let i = 0; i < cityes.length; i++) {
+            
+
+            const element = cityes[i];
+
+            pop = element.population;
+
+            cityname = element.name;
+
+            bigCityes.push(cityname + pop);
+
+        }
+        console.log(bigCityes);
+
+
+        /*
+       
+
+       cityes.forEach(element => {
+
+           for(const key in element){
+
+               if(Object.hasOwnProperty.call(Object, key))
+               {
+                   bigCityes.push(Object[key]);
+               }
+
+           }
+           
+       });
+
+
+      
+       
+       for (let i = 0; i < cityes.length; i++) {
+           if (cityes[i].[population] > 3000000) {
+               bigCityes.push(cityes[i]);
+           }
+       }
+       console.log(bigCityes);
+       */
+    </script>
+
+</body>
+
+
+</html>

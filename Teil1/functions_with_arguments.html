@@ -12,6 +12,22 @@
     <p>The Fortune Teller</p>
     <p id="demo1"></p>
     <script>
+        function func1(a, b, c) {
+            console.log(arguments[0]);
+            // expected output: 1
+
+            console.log(arguments[1]);
+            // expected output: 2
+
+            console.log(arguments[2]);
+            // expected output: 3
+        }
+
+        func1(1, 2, 3);
+
+    </script>
+    
+    <script>
         function tellFortune(jobTitle, geoLocation, partner, numKids) {
         let future = 'You will be a ' + jobTitle + ' in ' + geoLocation + ' and married to ' +
     partner + ' ' + ' with ' + numKids + ' kids.';

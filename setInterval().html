@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Exercises: Example with setInterval()</h1>
+
+    <p>setInterval</p>
+    <p id="demo1"></p>
+    
+    <script>
+
+        // setInterval examples:
+       
+        const element1 = document.getElementById("demo1");
+        setInterval(function() {
+            element1.innerHTML += "Hello"
+        },2000); // execute every two seconds
+    
+    </script>
+    <p id="demo2"></p>
+    <script>
+        const element2 = document.getElementById("demo2");
+        setInterval(() => {
+            element2.innerHTML += "Salam"
+        }, 1000); // execute every half second
+        
+    </script>
+
+</body>
+</html> 

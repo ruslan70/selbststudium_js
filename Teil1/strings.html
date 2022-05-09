@@ -30,26 +30,47 @@
     <p>MixUp</p>
     <p id="demo2"></p>
         <script>
+           
             function mixUp(a, b) {
                 return b.slice(0, 2) + a.slice(2) + " " + a.slice(0, 2) + b.slice(2);
                
+               
             }
-            
+            alert (mixUp('dog', 'dinner'));
         </script>
 
 
-<p>FixStart</p>
+    <p>FixStart</p>
     <p name="demo3"></p>
         <script>
+            let s = 'babble';
+            
             function fixStart(s) {
                 let c = s.charAt(0);
-                return c + s.slice(1).replace(new RegExp(c, 'g'), '*');
-            }
 
-           
+                return c + s.slice(1).replace(new RegExp(c, 'g'), '*');
+                
+            }
+            
+           console.log(fixStart(s));
 
          </script>   
             
+    <p>Verbing</p>
+    <p name="demo4"></p>
+        <script>
+            let word = verbing('swim');
+            function verbing(word) {
+                if (word.length < 3) return word;
+                if (word.slice(-3) == 'ing') {
+                    return word + 'ly';
+                } else {
+                    return word + 'ing';
+                }
+            }
+           
+            console.log(word);
+         </script>   
         
        
                 
